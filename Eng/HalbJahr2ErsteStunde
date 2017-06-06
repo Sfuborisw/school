@@ -1,0 +1,36 @@
+I. Walking warmer: GEt back into English with a little small talk about current job project, latest trends in tech, software, current news (Wannacry)
+
+II Computer-Health-maintenance (p78)
+Create a cgrid and while listening fill it with information given in the audio. You will listen to it 2-3*.
+
+
+GRID:
+
+..s. ODS
+
+
+
+III. Mediation: Backups
+
+
+Im Folgenden will ich die vier grundliegenden Backup-Strategien erleäutern.
+
+Voll.
+Legt ein volles Backup an. Die Dateien sind bei jedem Durchlauf auf eine andere Festplatte kopiert. Das ist perfekter Schutz, da die Backups von den Quelldaten getrennt sind, und die Wiedereinspielung schnell geht.
+Allerdings wird viel Speicher benötigt, und die Zeit für ein volle Backup schreckt davon ab, diesen Weg täglich zu wählen (weil es lange dauert) 
+Volle Backups sollte man wöchentlich machen. Zusätzlich sollte man Sicherheit im Hinterkopf behalten, da 1:1 alle Daten gespeichert werden.
+
+Inkrementell:
+Geht sehr viel schneller als voll, was daran liegt, dass nur die veränderten Dateien übernommen werden. Dadurch dauert es weniger lange, zu speichern, aber länger, wieder einzuspielen, weil man erst das volle und dann die imkrementellen backups einspielen muss. Ein weiterer Vorteil ist, weniger anfallender Speicherverbrauch.
+Inkrementell sollte man jeden Tag updaten.
+
+Differenziell:
+Im Gegensatz zu inkrementellen Backups ist der Referenzpunkt für DBs das letzte volle Backup, nicht das letzte inkrementelle.
+Dadurch geht die Wiederherstellung schneller als bei inkrementellen backups, und backups dauern weniger lang als bei der 'Voll'-Methode.
+Speicherverbrauch liegt in der Mitte der ersten beiden Kategorien.
+
+Spiegel:
+Ein Spiegelbackup legt eine identische Kiopie aller ausgewählten Daten, ohne jede Komprimierung, an. Es wird kein Datencontainer angelegt, Versionierung geht also nicht.
+Da das Ziel zum Spiegel der Quelle wird, kann man auf die Daten direkt weiter zugreifen.
+Damit ist es die schnellste Backupmethode mit der kürzesten Wiederherstellungsdauer.
+Der Nachteil ist, dass am meisten Speicher benötigt wird, und die Daten sind nicht verschlüsselt.

@@ -1,0 +1,25 @@
+Codes
+
+Ein Code ist eine Vorschrift für eine eindeutige Zuordnung der Zeichen eines Zeichensatzes zu den Zeichen eines anderen Zeichensatzes
+
+Code-Arten:
+
+a) Numerische Codes
+-dualcode
+-BCD
+-barcode
+
+b) Alphanumerische Codes
+-ASCII-Code
+-EBCDIC-Code
+
+c) Leitungs-Codes
+-
+
+
+Numerische Codes codieren Ziffern
+
+Akohanumerische Codes:
+neben Ziffern und Buchstaben und Steuercodes
+
+Leitungscodes dienen zur Umwandlung von binäre Signale in Digitalsignale, die für das Übertragungsmedium veltugt werdeb,

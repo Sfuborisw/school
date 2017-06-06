@@ -1,0 +1,16 @@
+Modulare Programmierung / Methoden, Funktionen
+
+Ebene 1: User
+Ebene 2: Main-Methode
+
+Ebene 3: 'Unterprogramm' (modul)
+
+Ebene 1:
+    -Deklaration
+    -Methodenaufruf
+    -Ein. und -Ausgaben
+Ebene 3:
+    -Funktionalität (bsp. addieren)
+    -nimmt ggf. Argumente entgegen
+    -gibt ggf. return-values zurück
+

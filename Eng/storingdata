@@ -1,0 +1,30 @@
+Datenspeicher werden in Computern benutzt um Daten zu speichern.
+Diese Speicher gibt es in vielen Formen und Größen, und die Art gespeicherter Daten variiert ebenfalls.
+Es gibt zwei arten von Speicher:
+Hautspeicher, der ist volatl, und Sekundärspeicher, welcher nicht-volatil ist. 
+Volatiler Speicher ist 'löschbar', wogegen dies für Sekundären Speicher nicht der Fall ist.
+Im Prinzip reden wir, wenn wir von Datenspeichern reden, von Sekundärspeicher, welcher dazu genutzt wird, permanent Daten auf Computern zu speichern.
+Speichergeräte varriieren entsprechend ihrer Architektur und ihrem Design.
+Beispielsweise snd einige optisch, andere magnetisch, mechanisch oder flash.
+Der gängigste Speicher ist die Harddisk, welche in den meisten Computern benutzt wird.
+Andere Sekundärspeicher und -Techniken beinhalten Floppy-Disks, CD ROM/DVD ROM, flash, USB und Blu-Ray.
+CDs und DVDs können zwei verschiedene SPeichertypen haben.
+Der erste Typ kann icht gelöscht werden; er ist permanet gespeichert.
+Der zweite Typ wird "wiederbeschreibbar" bezeichnet: hierbei können die geschriebenen Daten vollständig gelöscht werden, so dass die selbe Disk für andere Daten wiederverwendet werden kann.
+Die Daten in einem Speichergerät können die Form von Dateien, Datenbanken, digitalem Video/Ton et annehmen.
+Nicht-volatile SPeichergeräte können Daten permanet speichern, bis der Nutzer sich dazu entschließt sie zu löschen.
+Dies ist der Fall ,ot Jard Dosls pder FÖpüüy Dosls- 
+Wiedemauch sei, sind die meisten Geräte die zum datenspeichern genutzt werden zerbrechlich und die Daten auf ihnen können schnell komprimitiert weden.
+Datenspeicher waren teuer, aber werden täglich billiger.
+Die Technologie entwickelt sich fortlaufen weriter, und Speichergrößen haben sich auf die Dimension von Terabytes entwickelt.
+
+
+short:
+Es gibt verschiedene Datenspeicher: Disks (Hard, CD, DVD, Blu-Ray), Flash (SSD, USB), die jeweils verschieden Eigenschaften haben.
+Das wichtigste kategorische Kriterium ist die Votalität; die Wiederverwendbarkeit von identischen Speicheradressen auf dem selben Geräti; so gibt es CDs und DVDs beider Eigenschaften.
+Im Alltagsgebrauch beziehen wir uns mit "Speichergeräten" meist auf votalitäre Geräte (z.B. HardDisks im Rechner).
+Die Speicherdaten können verschiedenst strukturiert sein, beispielsweise .mpg, .py oder .fragmentXYZ.
+Die Struktur von Speichergeräten ist meist fragil, die gespeicherten Daten sind entsprechend Anfällig für Komprimitierung.
+Speicher werden preislich immer zugänglicher, und dank fortschreitender Technik sind wir mittlerweile in der Größenordnung von Terabytes angelangt.
+
+

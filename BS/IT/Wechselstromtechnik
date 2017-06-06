@@ -1,0 +1,72 @@
+Einführung in die Wechselstromtechnik
+
+Spannungsarten:
+
+Gleichspannung
+
+--------------
+______________t>
+
+
+Wechselspannung
+
+--  --  --  --
+______________t>
+  --  --  --
+
+
+Mischspannun
+
+--  --  --  --
+______________t>
+
+
+  --  --  --
+
+
+Bei der Wechselspannung müssen die positiven Spannungszeitflächen eben so groß sein, wie die negativen Spannungszeitflächen.
+(ändert periodisch ihre Richtung/Polarität)
+
+u = û*sunP, û = Scheitelwert
+
+für Scheitelwert 10V:
+phi  ° | 000  030  060  090  120  150  180  210  240  270  300
+u Volt |   0    5  8.6  10   8.6    5    0   -5 -8.6  -10 -8.6
+
+
+ 10       *
+8.6     *   *
+  5   *       *
+  0 *-----------*-----------
+ -5               *
+-8.6                *   *
+-10                   *
+
+
+u = 10v *sin(phi)
+
+Definition der Periodendauer:
+
+T = Zeit für eine vollständige Periode
+Verhältnis: phi verhält sich zu 360° wie t zu T
+=> P = (360/T)*t
+
+Darstellung des Winkels P im Bogenmaß
+Einheitskreis
+phi:360° = bogenmaß:2r*pi
+t/T = bogenmaß/2pi
+Bogenmaß = (2pi*t) / T
+u = û.sin ((2piT)*t)
+
+Beispiel: T=20ms, t=5ms im Gradmaß
+
+u = û*sin((360/T)*t)
+u = 10vsin((360/20ms)*5ms)
+u = 10v
+
+
+im Bogenmaß
+u = û sin((2pi/T)*t)
+u = 10vsin((2pi/20ms)*5ms)
+
+

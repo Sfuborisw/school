@@ -1,0 +1,15 @@
+Der Effektivwert
+Der Effektivwert einer Wechselspannung ist der leistungswirksame Wert.
+
+Bsp:
+
+û = 10 V
+r = 5 Ohm
+
+_
+p  = (û * î)/2
+->
+Ueff = Ieff 
+-> Ueff = û/<2> = 10v/<2> = 7.07V
+-> Ieff = î/<2> = 2A/<2> = 1.414A
+

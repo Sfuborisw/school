@@ -1,0 +1,31 @@
+KVDiagramme
+KV-Diagramme (nach karnaugh-veitch ) dienen der übersichtlichen Darstellung und Vereinfachung von ODER-Normalformen
+     _   _     _
+z = (b ^ a) v (b ^ a) v (b 1 a)
+
+b = 0 0 1 1 
+a = 0 1 0 1
+z = 1 1 0 1
+
+|------|-----|---------|
+|  W   |  A: |  notA:  |
+|------|-----|---------|
+|  B:  |  1  |    0    |
+|------|-----|---------|
+| notB:|  1  |    1    |
+|------|-----|---------|
+
+Bei 2 Variablen sind vier Vollkonjunktionen möglich (entsprch 4 Felder im KV-Diagramm)
+Sind Vollkonjunktionen benachbart, können sie im Päckchen zusammengefasst werden.
+Die Päckchengröße darf zwei oder vier betragen (in KV-Diagrammen mit zwei Variablen)
+
+|-----------|
+| P|  A |nA |
+|--|----|---|
+| B|  1 | 1 |
+|--|----|---|
+|nB|  1 | 1 |
+|-----------|
+
+taucht eine variable innerhalb eines päckchens negiert und nicht-negiert auf, entfällt sie.
+

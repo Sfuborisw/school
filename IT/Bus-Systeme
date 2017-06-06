@@ -1,0 +1,137 @@
+Datenverbindungen in PC-Systemen
+
+Extern:
+-USB
+-VGA
+-DVI
+-LAN
+-PS2
+
+Intern:
+-S-ATA
+-PCI-Express
+
+
+===========================
+
+
+Welche Anforderungen werden an ein Bussystem gestellt?
+
+-Keine Zugriffskonflikte
+-Adressierbarkeit der Komponenten
+
+
+
+Allgemeine Darstellung eines Kommunikationsbusses
+
+ *knoten1  *knoten2  *knoten3
+-----------------------------
+Knoten = Kommunikationsknoten (Busteilnehmer/ Endgeräte)
+
+
+
+Aufbau eines seriellen Bussystems
+
+
+
+       00       01       10
+       Master   Slave    Slave
+
+       k1       k2       k3
+       |||      |||      |||
+Data --------------------------
+        ||       ||       ||
+Mass -------------------------- GND
+         |        |        |
+Clock --------------------------
+
+
+
+Taktleistung wird benötigt beim syncchronen serielle Bus
+ohne Taktleistung handelt es sich um einen asynchronen seriellen Bus
+
+Das Byte 11011100 wird bitweise 'hintereinander' seriell übertragen
+
+Datebpvertragungsrate ist abhängig von der Taktfrequenz. Hier 8 Takte pro Sekunde (s. nicht ge-vi-tes bild), was einer Taktfrequenz von 8Hz ebtspricht. Datenübertragungsrate ist somiet 8Bit/s.
+
+Soll gesendet oder gesteuert werden?
+In der Regel ist die Steuerinformation im DATA-Signal enthalten, z.B. 1 = lesen, 0 = schreiben.
+
+Behandlung von Kollisionen
+
+Falls zwei oder mehr Knoten gleichzeitig ein Signal auf die LEitung schicken, kann es zu Spannungserhöhungen oder Auslöschungen im Datensingal kommen.
+Daher muss gerelt sein wer senden darf. Dies geschieht durch den Busmaster.
+
+Nur er stellt Anfragen, der Slave darf antworten.
+
+Wie unterscheidet man einzelne Knoten /Adressierung)
+
+Die Teilnehmer erhalten Adressen
+
+Der Adresscode ist idR im Data Signal enthalten.
+
+2 Bit sind 4 Knoten adressierbar.
+
+Wie viele Bit werden benötigt, um 23 Teilnehmer zu adressieren?
+
+
+
+Aufbau eines parallelen Bussystems
+
+
+       00       01       10
+       Master   Slave    Slave
+
+       k1       k2       k3
+       |||      |||      |||
+Data1 --------------------------
+        ||       ||       ||
+Data2 --------------------------
+        ||       ||       ||
+Data3 --------------------------
+        ||       ||       ||
+Data4 --------------------------
+        ||       ||       ||
+Data4 --------------------------
+        ||       ||       ||
+Mass -------------------------- GND
+         |        |        |
+Clock --------------------------
+
+
+
+
+DATA1 -**-**-**-**------------------------------------------------------------------
+
+DATA2 ----**-------**-**------------------------------------------------------------
+
+DATA3 -**-**-------**-**------------------------------------------------------------
+
+DATA4 -------------**-**-**-**------------------------------------------------------
+
+Clock -_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+-_+
+
+
+Hier werden mit jedem Takt 4 Bit (Gleichzeitig) übertragen.
+Datenübertragungssatz = Taktfreuenz * Busbreite
+Busbreite ^= Anzahl der Leitungen eines Bussystems
+Z.B. 16Bit  Bus mit 1MHZ Taktfrequenz überträgt 1*10^6 1/s * 16Bit = 16MBit/s.
+
+
+Die Adressierung erfolgt über den Adressbus.
+
+Wie viele Arbeitsleitungen benötigt man um 75 Knoten zu adressieren?
+
+7 Leitungen, da 2^7 = 128
+
+Der Steuerbus ist für Lesen/Schreiben zuständig, 1^=lesen, 0^=schreiben
+
+(mit einem 32Bit breiten Adressenbus lässt sich beispielsweise ein Arbeitsspeicherlimit mit 4Gbyte adressieren.
+
+Probleme paralleler Datenübertragung:
+-(viele Leitungen bzw Leitbahnen)
+-nur begrenzte Länge möglich, da sonst
+Störanfällig (Übersprechen)
+
+
+I^2-Bus
