@@ -7,8 +7,29 @@
         * historisches
         * Typen (Rasterdisplay vs Vektor, Röhren, Flach)
         * Anschlüsse
-        * Datenübertragung
+        * Technische Typen nach Art des Bilddarstellungsverfahrens
+	* Datenübertragung
         * Standardauflösungen, Bildschirmmaße
+
+
+    Ablauf:
+
+	* historiie als narrativ (fasst zusammen was das restliche Projekt behandelt, stellt nur dar)
+		TODO: Anschlüsse anbinden
+
+	* Typen:
+  	    -alle auflisten,
+	    -relevante in-depth erläutern
+		TODO check types
+	
+	* Anschlüsse:
+	    -in historie
+
+	* DasBilddarstellungsverfahren/ tech. Typen:
+	    -'Wie wird ein Bild dargestellt?'
+		>Einleitung
+
+	* 
 
 
 2. Netzplan/ Balkendiagramm
@@ -27,7 +48,6 @@
         -?
 
     * Zuordnung der Arbeitspakete:
-        TODO
         -alle (Max protokolliert)
 
 4. * Entwurf des Schulungsverlaufes:
