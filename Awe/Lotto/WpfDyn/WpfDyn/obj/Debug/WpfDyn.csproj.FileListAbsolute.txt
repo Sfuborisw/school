@@ -1,0 +1,14 @@
+c:\users\g515519\documents\visual studio 2015\Projects\WpfDyn\WpfDyn\bin\Debug\WpfDyn.exe.config
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\bin\Debug\WpfDyn.exe
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\bin\Debug\WpfDyn.pdb
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn.csprojResolveAssemblyReference.cache
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\MainWindow.g.cs
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\App.g.cs
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn_MarkupCompile.cache
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn_MarkupCompile.lref
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\MainWindow.baml
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn.g.resources
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn.Properties.Resources.resources
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn.csproj.GenerateResource.Cache
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn.exe
+C:\Users\g515519\Documents\Visual Studio 2015\Projects\WpfDyn\WpfDyn\obj\Debug\WpfDyn.pdb
