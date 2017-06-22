@@ -1,0 +1,49 @@
+
+<!-- saved from url=(0049)https://secure.sovrnlabs.net/web/secure/data.html -->
+<html data-minimalscrollbar="yes"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">
+var debug = false
+var data = {
+    "id": "8U5xnz7HGk",
+    "values": {}
+}
+var count = 0
+for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i)
+    if (key.indexOf("sovrn.") == 0) {
+        var value = localStorage.getItem(key)
+        if (value.indexOf("{") == 0 || value.indexOf("[") == 0) {
+            value = JSON.parse(value)
+        }
+        data.values[key.replace(/^sovrn\./, "")] = value
+        count++;
+    }
+}
+if (count) {
+    debug && console.log("HOLDER SEND", document.domain, data)
+    parent.postMessage(data, "*")
+}
+window.addEventListener("message", function(event) {
+    debug && console.log("HOLDER RECEIVE", document.domain, event.origin, event.data)
+    if (event.data.id == "8U5xnz7HGk" && typeof event.data != "string") {
+        var data = event.data.values
+        var keys = Object.keys(data)
+        for (var i = 0; i < keys.length; i++) {
+            var key = keys[i]
+            var value = data[key]
+            if (value) {
+                if (typeof value == "object") {
+                    if (Object.keys(value).length == 0) {
+                        debug && console.log("HOLDER DELETE", key, value)
+                        localStorage.removeItem("sovrn." + key)
+                        return
+                    }
+                    value = JSON.stringify(value)
+                }
+                debug && console.log("HOLDER SAVE", key, value)
+                localStorage.setItem("sovrn." + key, value)
+            }
+        }
+    }
+})
+</script>
+</head><body></body></html>
