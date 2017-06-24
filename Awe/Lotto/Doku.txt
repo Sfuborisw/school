@@ -1,0 +1,68 @@
+1. Array für gezogene Zahlen anlegen
+
+2. BtClick überprüft Länge des Arrays, wenn < 5: Aktion (eigentliche Click-Funktion nach erfüllter Kondition)
+
+3. Lb1.Content =~ for x in Losungsarray: current_string = current_string + x
+
+4. BtClick Aktion = Append value of current button to array
+
+5. Ziehung()
+
+6. History()
+
+7. History-GUI
+
+
+
+///
+
+
+
+
+Ziehung():
+
+-generiert 6 individuelle rand-Zahlen in range 0-50
+-speichert die gelosten Zahlen in Array
+-vergleicht bitweise jedes Element des Wahlarrays mit jedem Element des Losungsarrays, und trägt Treffer ins Winnerarray ein
+-Deklaration des Rückgabewertes
+-Lb1.Content = Rückgabewert
+
+
+
+History():
+
+-moves results to history harray
+-wipes all other arrays
+
+
+
+
+/////
+
+PROGRAMMABLAUF:
+
+
+1) Default-GUI wird generiert (statischer Inhalt, immer gleiche Buttons usw)
+
+2) Innerhalb des 'numberfields' kann der User auf Zahlen klicken.
+
+3) OnClick wird geprüft:
+-auf wie viele Zahlen im aktuellen Durchlauf bereits geklickt wurde. Liegt die Zahl unter 6
+-und wurde die angeklickte Zahl noch nicht angeklickt
+
+4) wird die vom Button gehaltene value in ein array 'LosungsArray' übernommen.
+(Anhand der Länge dieses Arrays wird auch festgestellt, auf wie viele Zahlen im aktuellen Durchlauf bereits geklickt wurde.)
+
+5. Sobald das LosungsArray 6 Werte hält, wird die Ziehungsfunktion ausgeführt:
+-generiert 6 individuelle rand-Zahlen in range 0-50
+-speichert die gelosten Zahlen in Array
+-vergleicht bitweise jedes Element des Wahlarrays mit jedem Element des Losungsarrays,
+und trägt die Value des Losungsarrays je nach Treffer oder nicht koloriert als String ins Winnerarray ein,
+-Deklaration des Rückgabewertes: Winnerarray + kommentierender Satz (1-7 Treffer)
+-Lb1.Content = Rückgabewert (Jede angeklickte Zahl bleibt an Ort und Stelle, aber nach der Losung ist sie je nach Treffer oder nicht eingefärbt, und es gibt ein Fazit unter den gewählten Zahlen)
+
+6. Wird der 'neue Runde' Button geklickt, wird die history() funktion ausgeführt, die das WinnerArray archiviert, die arrays wiped, und die Statistik-GUI füllt
+
+7. Statisik-GUI: Zeigt die Ergebnisse der letzten 5 Runden, eine insg. Trefferquote usw usf. =)
+
+8. gg?
