@@ -1,0 +1,32 @@
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\ClassLotto.dll
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\bin\Debug\ClassLotto.pdb
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+c:\users\a\documents\visual studio 2017\Projects\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\bin\Debug\ClassLotto.dll
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\bin\Debug\ClassLotto.pdb
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1.csprojResolveAssemblyReference.cache
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\App.g.cs
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.Cache
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\WpfApp1\obj\Debug\WpfApp1.pdb

@@ -1,0 +1,10 @@
+c:\Users\a\documents\visual studio 2017\Projects\WpfApp1\ClassLotto\bin\Debug\ClassLotto.dll
+c:\Users\a\documents\visual studio 2017\Projects\WpfApp1\ClassLotto\bin\Debug\ClassLotto.pdb
+c:\Users\a\documents\visual studio 2017\Projects\WpfApp1\ClassLotto\obj\Debug\ClassLotto.csprojResolveAssemblyReference.cache
+c:\Users\a\documents\visual studio 2017\Projects\WpfApp1\ClassLotto\obj\Debug\ClassLotto.dll
+c:\Users\a\documents\visual studio 2017\Projects\WpfApp1\ClassLotto\obj\Debug\ClassLotto.pdb
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\ClassLotto\bin\Debug\ClassLotto.dll
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\ClassLotto\bin\Debug\ClassLotto.pdb
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\ClassLotto\obj\Debug\ClassLotto.csprojResolveAssemblyReference.cache
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\ClassLotto\obj\Debug\ClassLotto.dll
+C:\Users\a\repos\BS\Awe\Lotto\Current_Version\ClassLotto\obj\Debug\ClassLotto.pdb

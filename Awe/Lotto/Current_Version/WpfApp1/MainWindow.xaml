@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfDyn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDyn"
+        mc:Ignorable="d"
+        Title="MainWindow" Width="1280" Height="720" Background="WhiteSmoke">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Titel_Label"  Content="Unser Lottogame!" FontSize="34"   Margin="232,28,32,0" VerticalAlignment="Top" Width="1008" Height="60" Foreground="#FF1793D1" Background="WhiteSmoke" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="button_BG"  Content="" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="200" Height="720" Background="#FF242424" Grid.ColumnSpan="2"/>
+        <WrapPanel x:Name="WrapPanel1" HorizontalAlignment="Left" Height="308" Margin="232,120,0,0" VerticalAlignment="Top" Width="1008" RenderTransformOrigin="1.111,0.173" Grid.Column="1" Background="#FF242424"/>
+        <Button x:Name="btClear" Content="New Round" HorizontalAlignment="Left" Margin="25,24,0,0" Foreground="WhiteSmoke" FontSize="22" VerticalAlignment="Top" Width="150" Height="35" Background="#FF242424" BorderBrush="Transparent" Click="btClear_Click" Grid.Column="1"/>
+        <Label x:Name="lb1" Content="" FontSize="24" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#FF242424" Margin="232,466,0,0" VerticalAlignment="Top" Width="1008" Height="184" Background="WhiteSmoke" Grid.Column="1"/>
+        <Button x:Name="statButton" Content="Stats" HorizontalAlignment="Left" Margin="25,64,0,0" Foreground="WhiteSmoke" FontSize="22" VerticalAlignment="Top" Width="150" Height="35" Background="#FF242424" BorderBrush="Transparent" RenderTransformOrigin="0.392,0.378" Click="statButton_Click" Grid.Column="1"/>
+        <Button x:Name="aboutButton" Content="About" HorizontalAlignment="Left" Margin="25,104,0,0" Foreground="WhiteSmoke" FontSize="22" VerticalAlignment="Top" Width="150" Height="35" Background="#FF242424" BorderBrush="Transparent" RenderTransformOrigin="0.392,0.378" Click="aboutButton_Click" Grid.Column="1"/>
+    </Grid>
+</Window>
