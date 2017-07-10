@@ -1,0 +1,4 @@
+The users first name is Stockholm.
+His last name is Wick.
+His age is 31.
+His hometown is Stockholm.
