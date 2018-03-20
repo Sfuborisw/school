@@ -3,9 +3,13 @@ html, body {
     height: 100%;
 }
 body {
-    background: linear-gradient(to right, #355C7D, #11998e);
-    color: white;
+    background: linear-gradient(to right, #243B55, #141E30);
+    color: #e9ece5;
     font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: gold;
 }
 ul{
     list-style-type:none;
@@ -21,7 +25,7 @@ p{
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 15px;
-    border: 2px dashed #FF7F4F;
+    border: 1px solid #e9ece5;
     text-align: center;
 }
 #body_container{
@@ -30,12 +34,12 @@ p{
     overflow: auto;
     padding: 25px;
     margin: 15px;
-    border: 2px dashed #FF7F4F;
+    border: 1px solid #e9ece5;
 }
 #product_container{
     float: left;
     width: 300px;
-    border: 2px dotted white;
+    border: 2px dotted #e9ece5;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -48,7 +52,7 @@ p{
     padding-right: 10px;
     width: 300px;
     float: right;
-    border: 2px dotted white;
+    border: 2px dotted #e9ece5;
 }
 #selection_list{
 }
@@ -59,10 +63,10 @@ p{
 }
 #footer_content{
     padding: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin: 15px;
-    border: 2px dashed #FF7F4F;
+    border: 1px solid #e9ece5;
     text-align: center;
 }
 #login_container{
@@ -74,7 +78,7 @@ p{
     padding: 10px;
     padding-top: 0px;
     top: 15px;
-    border: 2px dashed white;
+    border: 1px solid #e9ece5;
 }
 #login_right {
     position: absolute;

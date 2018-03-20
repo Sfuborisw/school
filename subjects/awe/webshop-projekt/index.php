@@ -4,7 +4,7 @@
    session_start();
 ?>
 <head>
-   <title>Supercooler Webshop 30000</title>
+   <title>*Der* Webshop</title>
    <link rel="stylesheet" type="text/css" href="static/style/main.css">
    <script src="static/js/main.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -13,8 +13,10 @@
 <body>
    <div id="head_container">
       <div id="head_content">
-         <h1>webshop "hell yeah"</h1>
+         <h1>*Der* Webshop</h1>
       </div>
+
+
       <div id="login_container">
          <form class="form-signin" role="form" 
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
@@ -30,15 +32,17 @@
             <div id="login_right">
                <button class="btn_login" type="submit" 
                   name="login">Login</button><br>
-               <a href="logout.php" tite="Logout">log out</a>
             </div>
          </form>
       </div>
-   </div>
+
+
    </div>
    <div id="body_container">
-   <div id = "log_in_logic">
-      <?php
+
+
+       <div id = "log_in_logic">
+          <?php
          if (isset($_POST['login']) && !empty($_POST['email']) 
             && !empty($_POST['password'])) {
                 $db = new SQLite3('static/db/webshop.db');
@@ -58,24 +62,41 @@
             }
          }
          ?>
+
+
       <div id="body_content">
+
+
          <div id="product_container">
-            <h3>Produkte:</h3>
             <ul id="product_list">
+                <?php
+                $db = new SQLite3('static/db/webshop.db');
+                $results = $db->query('SELECT id, image, name, price FROM products;');
+                while ($row = $results->fetchArray()){
+                    echo "<div id='product_id_'".$row['id']."'>"
+                    ."<img src='data:image/jpeg;base64,".base64_encode($row['image'])
+                    ."' width='100px' height='100px'></img><br>"
+                    .$row['name'].", "
+                    .$row['price']."</div>\n<br>\n";
+                }
+                ?>
             </ul>
          </div>
-         <div id="shopping_cart">
+         
+        <div id="shopping_cart">
             <h3>Einkaufswagen</h3>
             <ul id="selection_list">
                <li>selected example-product</li>
             </ul>
          </div>
+
+
       </div>
    </div>
    <div id="footer_container">
       <div id="footer_content">
-         <h2>Wlan-Kabel für den Profi mit Standards!</h2>
-         <p>©Maximilian Middeke 2018</p>
+         <p>ITF16b 2018<p>
+         <p><a href="register.php">registrieren</a></p>
       </div>
    </div>
 </body>

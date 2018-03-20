@@ -18,6 +18,8 @@
    </div>
    <div id="body_container">
       <div id="body_content">
+
+
       <div id="register_container">
          <form class="form-signin" role="form" 
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
@@ -56,7 +58,11 @@
                   name="register">Registrieren</button><br>
          </form>
       </div>
+
+
    </div>
+
+
    <div id = "register_logic">
       <?php
    if (isset($_POST['register'])
@@ -66,33 +72,36 @@
             && !empty($_POST['lname'])
             && !empty($_POST['birth_date'])
             && !empty($_POST['email'])) {
-                $fname = "'".$_POST['fname']."'";
-                $lname = "'".$_POST['lname']."'";
-                $birth_date = "'".$_POST['birth_date']."'";
-                $umail = "'".$_POST['email']."'";
-                $pass_hash = "'".md5($_POST['pass'])."'";
+
+                $fname = "'".SQLite3::escapeString($_POST['fname'])."'";
+                $lname = "'".SQLite3::escapeString($_POST['lname'])."'";
+                $birth_date ="'". SQLite3::escapeString($_POST['birth_date'])."'";
+                $umail = "'".SQLite3::escapeString($_POST['email'])."'";
+                $pass_hash = "'".SQLite3::escapeString(md5($_POST['pass']))."'";
+
                 $db = new SQLite3('static/db/webshop.db');
                 $cmd = "INSERT INTO customers
                     (fname, lname, birth_date, email, pass_hash)
                     VALUES ("
                     .$fname.", ".$lname.", ".$birth_date.", ".$umail.", ".$pass_hash
                     .");";
-                echo $cmd."<br>";
                 $result = $db->query($cmd);
                 if(! $result){
-                    die('could not insert data '.$db->lastErrorMsg());
+                    die('db-error: '.$db->lastErrorMsg());
                 }
                 else{
-                    echo 'Versuchen Sie, sich einzuloggen';
+                    echo 'Registrierung erfolgreich!';
                 };
-   };
-             ?>
+           };
+      ?>
       </div>
-   </div>
+   
+
+</div>
    <div id="footer_container">
       <div id="footer_content">
-         <h2>Wlan-Kabel für den Profi mit Standards!</h2>
-         <p>©Maximilian Middeke 2018</p>
+         <p>ITF16b 2018<p>
+         <p><a href="index.php">index</a></p>
       </div>
    </div>
 </body>
