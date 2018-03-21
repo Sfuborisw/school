@@ -1,0 +1,36 @@
+L5 Anwendungsschicht { http, pop3, ftp [..] }
+L4 Transport { UDP TCP-Segmente }
+L3 Vermittlungsschicht { Datagramme, Datenpakete, ipv4/6 }
+L2 Sicherungsschicht { MAC, Daten }
+L1 Bitübertragungsschicht { Leitungscodes }
+
+
+Sicherungsschicht(L"){
+Die Aufgabe der Sicherungsschicht/Linklayer ist eine zuverlässige und fehlerfrei Übermittlung von Datenframes zu gewährleisten.
+Dazu wird der Datenstrom in Blöcke (Frames/Rahmen) aufgeteilt und Prüfsummen zum Erkennen von fehlerhaften Frames hinzugefügt.
+Der bedeutendste Standard der Netzwerktechnik ist Ethernet IEEE802.3
+}
+
+Bitübertragungsschicht(L1){
+Schicht 1 hat die Aufgabe die Bitfolge des Ethernet Frames für die Übertragung auf einem Medium (Glas, Kupfer, Luft) optimal zu kodieren.
+Damit der Empfänger weiss, welche zeitliche Dauer ein Bit besitzt, muss zusätzlich eine Taktinformation übertragen werden. Diese kann über eine separate Leitung (bzw Übertragugnskanal) erfolgen oder in den Bitstrom hineincodiert werden.
+Das Taktsignal dient somit der Synchronisation zwischen Sender und Empfänger.
+}
+
+Beispiele Leitungscodes
+
+Bezeichnung     Einsatz         Beschreibung
+--------------------------------------------
+5-PAM           1000 BaseT      Nutzt Pulsamplitudenverfahren mit 5 unterschiedlichen Spannungspegeln
+4B5B            100 BaseT       Umsetzung von 4 Nutzdatenbits auf 5 Codebits -> Taktrückgewinning/ Fehlerkorrektur
+Manchester      10 BastT        Das codierte Signal hat eine doppelt so hohe Frequenz wie das Nutzsignal -> DC Frei, Taktrückgewinnung
+TTL                             Takt und Nutzsignal auf unterschiedlichen Lanälen -> Hoher DC-Anteil
+
+
+Interaktionen zwischen gleichrangigen und benachbarten Schichten
+1) Interaktionen benachbarter Schichten auf dem selben Computer
+Auf einem Computer vermittelt eine Schicht einer übergeordneten Schicht einen Dienst. Die untergeordnete Schicht 
+
+
+Ethernetframe und Protokollkapselung
+

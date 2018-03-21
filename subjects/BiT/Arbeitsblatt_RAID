@@ -1,0 +1,8 @@
+1. Vollständige Datensicherung
+2. Inkrementelle Sicherung, Vollständig
+3. Differenzielle Sicherung, Vollständig
+4. Großvater-Sohn-Prinzip
+5. Hot backup
+6. Cold backup
+7. Generationsprinzip
+8. Ist RAID ein Backup? WTF nein, kys

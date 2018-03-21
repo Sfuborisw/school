@@ -1,0 +1,34 @@
+Ethernerrahmen
+Dest.MAC ++ SourceMac ++ Type ++ Data
+6Byte       6Byte        2Byte   ->1500Byte
+
+Aufbau von MAC-Adressen
+(Media-Access-Control)
+Addressierungsart der Schicht 2
+Es gibt Einzel- und Gruppenadressen
+(Unicast bzw Broad- und Multicast)
+Aufbau:
+Länger 6 Byte, also 48 Bit
+Schreibweise meist im hex-Format
+e.g. 00-50-04-45-a6-3b
+     \  HK  / \  GK  /
+     HK=Herstellerkennung, GK=Gerätekennung
+Bei Einzeladressen (Unicast) geben die ersten 3 Byte die Herstellerkennung an.
+Die letzten 3 Byte(24Bit) sind die Gerätekennung.
+Adressieung muss einzigartig sein.
+Das erste Bit gibt an, ob es sich um eine Einzel- oder eine Gruppenadresse handelt.
+O^=I Einzeladresse
+1^=G Gruppenadresse
+Das zweite Bit (U/L) gibt an, ob die Adresse global oder lokal eindeutig ist.o
+O^=U universally adminstrated address
+1^=L locally administrated address
+
+Gruppenadressen
+können alle Hosts eines Netzwerks (Broadcast) oder eine Empfängergruppe adressieren (multicast)
+
+01-00-5e-7f-ff-ff
+Im Ethernet frame sind Gruppenadressen nur als Zieladresse gültig
+Die letzten 23 Bit der Multicast ipv4-Adresse werden auf die Mac-Adresse abgebildet.
+
+224.192.1.14 > 01-00-5e-49-91-9e
+

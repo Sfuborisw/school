@@ -1,0 +1,34 @@
+--Get soll nur Daten abrufen, aber keine Änderungen auf dem Server verursachen
+--URL nicht länger als 255b
+
+Werden auf dem server Daten verndert: POST; else: GET;
+sensible Daten: immer POST.
+
+
+Sicherheit:
+GET:
+POST:
+Sichtbarkeit:
+GET:
+POST:
+Restriktion bzgl Datentypen:
+GET:
+POST:
+Restriktion bugl. Vol:
+GET:
+POST:
+Zeichenkodierung:
+GET:
+POST:
+zurük-button/reload:
+GET:
+POST:
+Browserverlauf:
+GET:
+POST:
+LEsezeichen:
+GET:
+POST:
+Browser Cache:
+GET:
+POST:

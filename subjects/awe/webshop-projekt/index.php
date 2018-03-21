@@ -76,14 +76,14 @@
                     echo "<div class='product'>"
                         ."<form method='post' action='index.php?action=add&code=".$row['id'].">\n"
                     ."<div class='product'>"
-                    ."<img src='data:image/jpeg;base64,".base64_encode($row['image'])
+                    ."<img src='data:image/png;base64,".base64_encode($row['image'])
                     ."' width='100px' height='100px'></img><br>"
                     .$row['name'].", "
                     .$row['price']."<br>"
                     .'<input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" />'
                     ."<br>\n</form>\n</div>\n<br>";
                 }
-                ?>
+               ?>
             </ul>
          </div>
          
