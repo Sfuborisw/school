@@ -1,45 +1,55 @@
 html, body {
     margin: 0;
     height: 100%;
+    -webkit-appearance: none;
+    overflow: hidden;
+    font-size: 16px;
 }
 body {
-    background: linear-gradient(to right, #243B55, #141E30);
-    color: #e9ece5;
-    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #1c92d2, #f2fcfe);
+    color: #240087;
+    font-family: 'PT Sans', sans-serif;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
 }
 a {
     text-decoration: none;
     color: gold;
 }
+h1{
+    font-size: 30px;
+    color: white;
+}
 ul{
     list-style-type:none;
 }
 p{
-    font-size: 12px;
+    font-size: 16px;
+}
+.button{
+    background-color: black;
 }
 #head_container {
     position: relative;
+    overflow: hidden;
 }
 #head_content {
-    padding: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 15px;
-    border: 1px solid #e9ece5;
+    padding-left:15px;
+    position: absolute;
     text-align: center;
+    z-index: 50;
 }
 #body_container{
 }
 #body_content{
     overflow: auto;
-    padding: 25px;
     margin: 15px;
-    border: 1px solid #e9ece5;
+    color: white;
 }
 #product_container{
     float: left;
     width: 300px;
-    border: 2px dotted #e9ece5;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -48,50 +58,131 @@ p{
     margin: 10px;
 }
 #shopping_cart{
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 300px;
+    border-radius: 15px;
+    background: linear-gradient(to right, rgba(36,0,135,0.5), rgba(36, 0, 135, 0.8));
+    color: white;
+    padding: 20px;
     float: right;
-    border: 2px dotted #e9ece5;
 }
 #selection_list{
 }
 #footer_container{
     position: absolute;
-    width: 100%;
+    background-color: rgba(0,0,0,0.8);
     bottom: 0px;
+    color: white;
+    width: 100%;
+    margin-bottom: 0px;
 }
 #footer_content{
-    padding: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 15px;
-    border: 1px solid #e9ece5;
+    padding: 5px;
     text-align: center;
 }
-#login_container{
-    position: absolute;
-    width: 214px;
-    right: 30px;
-    height: 60px;
-    float: right;
+#nav{
+    position: relative;
+    background-color: rgba(36, 0, 135, 0.8);
     padding: 10px;
-    padding-top: 0px;
-    top: 15px;
-    border: 1px solid #e9ece5;
+    overflow: hidden;
+    z-index: 42;
 }
-#login_right {
-    position: absolute;
-    left: 170px;
-    top: 15px;
-}
-#login_left {
-    position: absolute;
+.nav_stuff{
+    position: relative;
     float: left;
-    top: 15px;
+    padding: 10px;
+    background-color: none;
+}
+.form_signin{
+    float: left;
+}
+#nav_content{
+    position: relative;
+    right: 15px;
+    float: right;
+    top: 0px;
+    padding: 10px;
+    right: 0px;
+}
+#login_mail{
+    position: relative;
+    float: left;
+}
+#login_pass{
+    position: relative;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#login_bt{
+    position: relative;
+    float: left;
+}
+#login_bt input{
+    background: #160052;
+}
+input{
+    box-sizing: border-box;
+    color: white;
+    background-color: #160052;
+    border: none;
+    border-radius: 11px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+input:focus{
+    background-color: white;
+    color: #160052;
+    outline: none;
+}
+input:active{
+    background-color: black;
 }
 .jq_link{
-    text-decoration: underline;
     display: inline-block;
-    color: gold;
+    color: white;
+}
+#register{
+    cursor: pointer;
+    position: relative;
+}
+#register:hover{
+    cursor: pointer;
+    color: #00c5ff !important;
+}
+#home{
+    position: relative;
+}
+#userpage{
+    display: inline-block;
+}
+#user_content{
+    color: white;
+}
+.w700{
+    font-weight: 700;
+    font-style: italic;
+}
+#login{
+    cursor: pointer;
+    background-color: #160052;;
+    border: 1px solid #d9d9d9;
+    color: white;
+    border-radius: 11px;
+    height:39px;
+    font-weight: 500;
+}
+#login:hover{
+    color: #00c5ff;
+    cursor: pointer;
+    border: 1px solid #00c4ff;
+}
+#home:hover{
+    cursor: pointer;
+    color: #00c5ff !important;
+}
+#userpage:hover{
+    cursor: pointer;
+    color: #00c5ff !important;
+}
+.hoverc{
+    color: #00c5ff;
 }

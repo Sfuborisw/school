@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded', function(){ 
+    $('#register_container, #user_container').hide();
+
+    var menu_els = ['#userpage', '#register', '#body_content']
+    var menu_l = menu_els.length;
+    var menu_targets = ['#register_container', '#user_container', '#product_list']
+
+    for (var i=0; i < menu_l; i++){
+        cur_el = $(menu_els[i]);
+        cur_el.on('click', menu_els[i], function(){
+            alert('clicked');
+        });
+    };
+});

@@ -8,33 +8,44 @@
    <link rel="stylesheet" type="text/css" href="static/style/main.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="static/js/main.js"></script>
-   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
    <meta charset="utf-8">
 </head>
 <body>
    <div id="head_container">
       <div id="head_content">
-         <h1>*Der* Webshop</h1>
+         <a href="./index.php"><h1><span class="w700">Der</span> Webshop</h1></a>
       </div>
 
 
-      <div id="login_container">
-         <form class="form-signin" role="form" 
+      <div id="nav">
+      <div id="nav_content">
+         <div id='home' class='jq_link nav_stuff'>Home</div>
+         <div id='userpage' class='jq_link nav_stuff'>Userpage
+             <div id='userpage_dropdown'>
+                <div id='history'>Letzte Bestellungen</div>
+                <div id='logout'>Logout</div>
+             </div>
+         </div>
+         <div id='register' class='jq_link nav_stuff'>Registrieren</div>
+         <form class="form_signin" id="login_container" role="form" 
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
                ?>" method = "post">
-            <div id="login_left">
-               <input type="text" class="form-control" 
+                <div id="login_mail">
+               <input type="text" class="form-control nav_stuff" 
                   name="email"
                   placeholder="email" 
-                  required><br>
-               <input type="password" class="form-control"
-                  name="password" placeholder="password" required><br>
-            </div>
-            <div id="login_right">
-               <button id="login" type="submit" 
-                  name="login">Login</button><br>
-            </div>
+                  required>
+                </div>
+                <div id="login_pass">
+               <input type="password" class="form-control nav_stuff"
+                  name="password" placeholder="password" required>
+                </div>
+               <button id="login" class="nav_stuff" type="submit" 
+                  name="login">Login</button>
          </form>
+    </div>
+    </div>
       </div>
 
        <div id = "log_in_logic">
@@ -149,7 +160,7 @@
                     $fname = $row['fname'];
                     $lname = $row['lname'];
                     $email = $row['email'];
-                    echo "<h2>Hallo, ".$fname.',</h2>'
+                    echo "<h2>Hallo, ".$fname.'.</h2>'
                         .'<h3>Deine mailaddresse ist:<br>'
                         .$email.".</h3>";
                 }
@@ -198,14 +209,12 @@
    <div id="footer_container">
       <div id="footer_content">
          <p>ITF16b 2018<p>
-         <div id='home' class='jq_link'>home</div>
-         <div id='userpage' class='jq_link'>userpage</div>
-         <div id='register' class='jq_link'>registrieren</div>
       </div>
    </div>
 <?php
        echo "<script type=text/javascript>$('#userpage').hide();</script>";
        if ($logged_in == True){
+           echo "<script type=text/javascript>$('#userpage').html('".$uname."');</script>";
            echo "<script type=text/javascript>$('#userpage').show(300);</script>";
            echo "<script type=text/javascript>$('#login_container, #register').hide(300);</script>";
        };
