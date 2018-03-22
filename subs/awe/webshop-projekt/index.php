@@ -6,6 +6,7 @@
 <head>
    <title>*Der* Webshop</title>
    <link rel="stylesheet" type="text/css" href="static/style/main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="static/js/main.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
    <meta charset="utf-8">
@@ -30,16 +31,11 @@
                   name="password" placeholder="password" required><br>
             </div>
             <div id="login_right">
-               <button class="btn_login" type="submit" 
+               <button id="login" type="submit" 
                   name="login">Login</button><br>
             </div>
          </form>
       </div>
-
-
-   </div>
-   <div id="body_container">
-
 
        <div id = "log_in_logic">
           <?php
@@ -56,12 +52,21 @@
                $_SESSION['valid'] = true;
                $_SESSION['timeout'] = time();
                $_SESSION['email'] = 'user';
-               echo 'Eingeloggt als '.$uname.'!';
-            }else {
+               $logged_in = True;
+            }
+            else {
                echo 'Incorrect email/pass-combination!';
+               $umail = False;
+               $logged_in = False;
             }
          }
          ?>
+    </div>
+
+   </div>
+   <div id="body_container">
+
+
 
 
       <div id="body_content">
@@ -94,13 +99,114 @@
             </ul>
          </div>
 
+      <div id="register_container">
+         <form class="form-signin" role="form" 
+            action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
+               ?>" method = "post">
+               <input type="text"
+               class="form-control"
+               name="email"
+               placeholder="Email"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="fname"
+               placeholder="Vorname"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="lname"
+               placeholder="Nachname"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="birth_date"
+               placeholder="Geburtsdatum YYYY-D-M"
+               required>
+               <br>
+               <input type="password"
+               class="form-control"
+               name="pass"
+               placeholder="Passwort"
+               required>
+               <br>
+               <button class="btn_register" type="submit" 
+                  name="register">Registrieren</button><br>
+         </form>
+      </div>
 
+
+      <div id="user_container">
+        <div id="user_content">
+            <?php
+            if ($umail){
+                $db = new SQLite3('static/db/webshop.db');
+                $results = $db->query("SELECT * FROM customers WHERE email ='".$umail."';");
+                while ($row = $results->fetchArray()){
+                    $fname = $row['fname'];
+                    $lname = $row['lname'];
+                    $email = $row['email'];
+                    echo "<h2>Hallo, ".$fname.',</h2>'
+                        .'<h3>Deine mailaddresse ist:<br>'
+                        .$email.".</h3>";
+                }
+            }
+            else{
+                echo "not logged in";
+            }
+            ?>
+        </div>
+      </div>       
+
+   <div id = "register_logic">
+      <?php
+   if (isset($_POST['register'])
+            && !empty($_POST['email']) 
+            && !empty($_POST['pass'])
+            && !empty($_POST['fname'])
+            && !empty($_POST['lname'])
+            && !empty($_POST['birth_date'])
+            && !empty($_POST['email'])) {
+
+                $fname = "'".SQLite3::escapeString($_POST['fname'])."'";
+                $lname = "'".SQLite3::escapeString($_POST['lname'])."'";
+                $birth_date ="'". SQLite3::escapeString($_POST['birth_date'])."'";
+                $umail = "'".SQLite3::escapeString($_POST['email'])."'";
+                $pass_hash = "'".SQLite3::escapeString(md5($_POST['pass']))."'";
+
+                $db = new SQLite3('static/db/webshop.db');
+                $cmd = "INSERT INTO customers
+                    (fname, lname, birth_date, email, pass_hash)
+                    VALUES ("
+                    .$fname.", ".$lname.", ".$birth_date.", ".$umail.", ".$pass_hash
+                    .");";
+                $result = $db->query($cmd);
+                if(! $result){
+                    die('db-error: '.$db->lastErrorMsg());
+                }
+                else{
+                    echo 'Registrierung erfolgreich!';
+                };
+           };
+      ?>
+      </div>
       </div>
    </div>
    <div id="footer_container">
       <div id="footer_content">
          <p>ITF16b 2018<p>
-         <p><a href="register.php">registrieren</a></p>
+         <div id='home' class='jq_link'>home</div>
+         <div id='userpage' class='jq_link'>userpage</div>
+         <div id='register' class='jq_link'>registrieren</div>
       </div>
    </div>
+<?php
+       if ($logged_in == True){
+           echo "<script type=text/javascript>$('#userpage').show();</script>";
+           echo "<script type=text/javascript>$('#login_container, #register').hide(300);</script>";
+       };
+?>
 </body>

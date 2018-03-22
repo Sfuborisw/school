@@ -90,3 +90,8 @@ p{
     float: left;
     top: 15px;
 }
+.jq_link{
+    text-decoration: underline;
+    display: inline-block;
+    color: gold;
+}
