@@ -204,8 +204,9 @@
       </div>
    </div>
 <?php
+       echo "<script type=text/javascript>$('#userpage').hide();</script>";
        if ($logged_in == True){
-           echo "<script type=text/javascript>$('#userpage').show();</script>";
+           echo "<script type=text/javascript>$('#userpage').show(300);</script>";
            echo "<script type=text/javascript>$('#login_container, #register').hide(300);</script>";
        };
 ?>
