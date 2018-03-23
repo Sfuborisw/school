@@ -73,7 +73,11 @@ p{
    cursor: pointer; 
    background-color: #00c4ff;
 }
-.product input[type=submit]{
+.product input[type=text]{
+    background-color: white;
+    border: 1px solid #1e1f26;
+    color: #1e1f26;
+    text-align: center;
 }
 #shopping_cart{
     border-radius: 15px;
@@ -182,6 +186,7 @@ input:active{
     height: 50px;
     border-bottom: 1px solid white;
     width: 100%;
+    margin: 0 auto;
 }
 .btn_register{
     height: 50px;
