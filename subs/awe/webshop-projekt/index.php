@@ -25,6 +25,8 @@
         $contact_data_title = $row[$lang.'_contact_data_title'];
         $post_title = $row[$lang.'_post_title'];
         $greeting = $row[$lang.'_greeting'];
+        $de_lang_link = $row['de_lang_link'];
+        $en_lang_link = $row['en_lang_link'];
     };
     ?>
 <head>
@@ -273,10 +275,10 @@
       <p class="footer_el">ITF16b 2018<p>
         <?php
         if ($lang == "de"){
-            echo '<a class="footer_el" id="switch_lang" href="./index.php?lang=en">English version</a>';
+            echo $en_lang_link;
         }
         else {
-            echo '<a class="footer_el" id="switch_lang" href="./index.php?lang=de">Deutsche Version</a>';
+            echo $de_lang_link;
         };?>
       </div>
    </div>
