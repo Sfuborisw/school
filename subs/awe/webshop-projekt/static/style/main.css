@@ -6,8 +6,8 @@ html, body {
     font-size: 16px;
 }
 body {
-    background: linear-gradient(to right, #1c92d2, #f2fcfe);
-    color: #240087;
+    background-color: white;
+    color: #283655;
     font-family: 'PT Sans', sans-serif;
 }
 input:-webkit-autofill {
@@ -15,17 +15,17 @@ input:-webkit-autofill {
 }
 a {
     text-decoration: none;
-    color: gold;
+    color: #d0e1f9;
 }
 h1{
     font-size: 30px;
-    color: white;
+    color: #d0e1f9;
 }
 ul{
     list-style-type:none;
 }
 p{
-    font-size: 16px;
+    font-size: 12px;
 }
 .button{
     background-color: black;
@@ -45,7 +45,7 @@ p{
 #body_content{
     overflow: auto;
     margin: 15px;
-    color: white;
+    color: #283655;
 }
 #product_container{
     float: left;
@@ -59,8 +59,8 @@ p{
 }
 #shopping_cart{
     border-radius: 15px;
-    background: linear-gradient(to right, rgba(36,0,135,0.5), rgba(36, 0, 135, 0.8));
-    color: white;
+    background-color: #283655;
+    color: #d0e1f9;
     padding: 20px;
     float: right;
 }
@@ -68,7 +68,7 @@ p{
 }
 #footer_container{
     position: absolute;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #283655;
     bottom: 0px;
     color: white;
     width: 100%;
@@ -77,10 +77,11 @@ p{
 #footer_content{
     padding: 5px;
     text-align: center;
+    font-size: 10px;
 }
 #nav{
     position: relative;
-    background-color: rgba(36, 0, 135, 0.8);
+    background-color: #1e1f26;
     padding: 10px;
     overflow: hidden;
     z-index: 42;
@@ -89,6 +90,8 @@ p{
     position: relative;
     float: left;
     padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: none;
 }
 .form_signin{
@@ -117,12 +120,12 @@ p{
     float: left;
 }
 #login_bt input{
-    background: #160052;
+    background: #283655;
 }
 input{
     box-sizing: border-box;
     color: white;
-    background-color: #160052;
+    background-color: #283655;
     border: none;
     border-radius: 11px;
     font-family: 'PT Sans', sans-serif;
@@ -130,7 +133,7 @@ input{
 }
 input:focus{
     background-color: white;
-    color: #160052;
+    color: #283655;
     outline: none;
 }
 input:active{
@@ -138,7 +141,7 @@ input:active{
 }
 .jq_link{
     display: inline-block;
-    color: white;
+    color: #d0e1f9;
 }
 #register{
     cursor: pointer;
@@ -146,16 +149,17 @@ input:active{
 }
 #register:hover{
     cursor: pointer;
-    color: #00c5ff !important;
+    color: #f70025 !important;
 }
 #home{
     position: relative;
+    right: -20px;
 }
 #userpage{
     display: inline-block;
 }
 #user_content{
-    color: white;
+    color: #283655;
 }
 .w700{
     font-weight: 700;
@@ -163,26 +167,30 @@ input:active{
 }
 #login{
     cursor: pointer;
-    background-color: #160052;;
+    background-color: #283655;;
     border: 1px solid #d9d9d9;
-    color: white;
+    color: #d0e1f9;
     border-radius: 11px;
     height:39px;
     font-weight: 500;
 }
 #login:hover{
-    color: #00c5ff;
+    color: #d0e1f9;
     cursor: pointer;
     border: 1px solid #00c4ff;
 }
 #home:hover{
     cursor: pointer;
-    color: #00c5ff !important;
+    color: #f70025 !important;
 }
 #userpage:hover{
     cursor: pointer;
-    color: #00c5ff !important;
+    color: #f70025 !important;
 }
 .hoverc{
-    color: #00c5ff;
+    color: #d0e1f9;
+}
+::placeholder {
+    color: #d0e1f9;
+    opacity: 1;
 }

@@ -4,7 +4,7 @@
    session_start();
 ?>
 <head>
-   <title>*Der* Webshop</title>
+   <title>*Der* webshop</title>
    <link rel="stylesheet" type="text/css" href="static/style/main.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="static/js/main.js"></script>
@@ -14,7 +14,7 @@
 <body>
    <div id="head_container">
       <div id="head_content">
-         <a href="./index.php"><h1><span class="w700">Der</span> Webshop</h1></a>
+         <a href="./index.php"><h1><span class="w700">Der</span> webshop</h1></a>
       </div>
 
 
@@ -215,8 +215,8 @@
        echo "<script type=text/javascript>$('#userpage').hide();</script>";
        if ($logged_in == True){
            echo "<script type=text/javascript>$('#userpage').html('".$uname."');</script>";
-           echo "<script type=text/javascript>$('#userpage').show(300);</script>";
-           echo "<script type=text/javascript>$('#login_container, #register').hide(300);</script>";
+           echo "<script type=text/javascript>$('#login_container, #register').hide(1200);</script>";
+           echo "<script type=text/javascript>$('#userpage').show(600);</script>";
        };
 ?>
 </body>
