@@ -22,6 +22,9 @@
         $lname_input = $row[$lang.'_lname_input'];
         $cart_title = $row[$lang.'_cart_title'];
         $pass_input = $row[$lang.'_pass_input'];
+        $contact_data_title = $row[$lang.'_contact_data_title'];
+        $post_title = $row[$lang.'_post_title'];
+        $greeting = $row[$lang.'_greeting'];
     };
     ?>
 <head>
@@ -51,8 +54,8 @@
          </div>
          <div id='register' class='jq_link nav_stuff'><?php echo $register_btn; ?></div>
          <form class="form_signin" id="login_container" role="form" 
-            action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-               ?>" method = "post">
+         action="<?php echo $_SERVER["PHP_SELF"] . '?'.http_build_query($_GET); ?>"
+               method = "post">
                 <div id="login_mail">
                <input type="text" class="form-control nav_stuff" 
                   name="email"
@@ -63,6 +66,8 @@
                <input type="password" class="form-control nav_stuff"
                name="password" placeholder="<?php echo $pass_input; ?>" required>
                 </div>
+
+
                <button id="login" class="nav_stuff" type="submit" 
                   name="login">Login</button>
          </form>
@@ -204,12 +209,12 @@
                     $fname = $row['fname'];
                     $lname = $row['lname'];
                     $email = $row['email'];
-                    echo "<h2>Hallo, ".$fname.'.</h2>'
-                        .'<b>Deine Kontaktdaten:</b><br>'
+                    echo "<h2>".$greeting.", ".$fname.'.</h2>'
+                        .'<b>'.$contact_data_title.'</b><br>'
                         .$fname.' '.$lname.'<br>'
                         .$row['email'].'<br>'
                         .'<br>'
-                        .'<b>Postalische Adresse:</b><br>'
+                        .'<b>'.$post_title.'</b><br>'
                         .$row['street_name'].' '.$row['house_nr'].'<br>'
                         .$row['city_code'].' '.$row['city_name'].'<br>';
 
