@@ -270,7 +270,14 @@
    </div>
    <div id="footer_container">
       <div id="footer_content">
-         <p class="footer_el">ITF16b 2018<p><a class="footer_el" id="switch_lang" href="./index.php?lang=en">English version</a>
+      <p class="footer_el">ITF16b 2018<p>
+        <?php
+        if ($lang == "de"){
+            echo '<a class="footer_el" id="switch_lang" href="./index.php?lang=en">English version</a>';
+        }
+        else {
+            echo '<a class="footer_el" id="switch_lang" href="./index.php?lang=de">Deutsche Version</a>';
+        };?>
       </div>
    </div>
 <?php
