@@ -93,7 +93,6 @@ p{
     position: fixed;
     background-color: #283655;
     bottom: 0px;
-    color: white;
     width: 100%;
     margin-bottom: 0px;
 }
@@ -101,6 +100,12 @@ p{
     padding: 5px;
     text-align: center;
     font-size: 10px;
+}
+.footer_el{
+    float: right;
+    color: #d0e1f9;
+    padding: 10px;
+    padding-right: 20px;
 }
 #nav{
     position: relative;
@@ -182,17 +187,18 @@ input:active{
     border-radius: 0px;
     border: none;
     padding: 5px;
-    height: 50px;
+    height: 40px;
     border-bottom: 1px solid white;
     width: 100%;
     margin: 0 auto;
+    background-color: #1e1f26;
 }
 .btn_register{
-    height: 50px;
+    height: 40px;
     width: 100%;
-    color: #00c4ff;
+    color: #f70025;
     font-size: 16px;
-    background-color: #283655;
+    background-color: #1e1f26;
     border: none;
     text-align: left;
 }
