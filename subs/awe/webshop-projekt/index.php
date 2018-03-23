@@ -25,6 +25,11 @@
         $contact_data_title = $row[$lang.'_contact_data_title'];
         $post_title = $row[$lang.'_post_title'];
         $greeting = $row[$lang.'_greeting'];
+        $head_title = $row[$lang.'_head_title'];
+        $home_bt = $row[$lang.'_home_bt'];
+        $login_bt = $row[$lang.'_login_bt'];
+        $footer = $row[$lang.'_footer'];
+        $email_placeholder = $row[$lang.'_email_placeholder'];
         $de_lang_link = $row['de_lang_link'];
         $en_lang_link = $row['en_lang_link'];
     };
@@ -40,13 +45,13 @@
 <body>
    <div id="head_container">
       <div id="head_content">
-         <a href="./index.php"><h1><span class="w700">Der</span> webshop</h1></a>
+      <a href="./index.php"><h1><?php echo $head_title; ?></h1></a>
       </div>
 
 
       <div id="nav">
       <div id="nav_content">
-         <div id='home' class='jq_link nav_stuff'>Home</div>
+      <div id='home' class='jq_link nav_stuff'><?php echo $home_bt; ?></div>
          <div id='userpage' class='jq_link nav_stuff'>Userpage
              <div id='userpage_dropdown'>
                 <div id="acc_mgmt">Account-management</div>
@@ -61,17 +66,15 @@
                 <div id="login_mail">
                <input type="text" class="form-control nav_stuff" 
                   name="email"
-                  placeholder="Email" 
+                  placeholder="<?php echo $email_placeholder; ?>" 
                   required>
                 </div>
                 <div id="login_pass">
                <input type="password" class="form-control nav_stuff"
                name="password" placeholder="<?php echo $pass_input; ?>" required>
                 </div>
-
-
                <button id="login" class="nav_stuff" type="submit" 
-                  name="login">Login</button>
+               name="login"><?php echo $login_bt; ?></button>
          </form>
     </div>
     </div>
@@ -115,14 +118,14 @@
          <div id="product_container">
                 <?php
                 $db = new SQLite3('static/db/webshop.db');
-                $results = $db->query('SELECT id, image, name, price FROM products;');
+                $results = $db->query('SELECT id, image, '.$lang.'_name, price FROM products;');
                 while ($row = $results->fetchArray()){
                     echo "<div class='product'>"
                         ."<form method='post' action='index.php?action=add&code=".$row['id'].">\n"
                     ."<div class='product'>"
                     ."<img src='data:image/png;base64,".base64_encode($row['image'])
                     ."' width='100px' height='100px'></img><br>"
-                    .$row['name'].", "
+                    .$row[$lang.'_name'].", "
                     .$row['price']."<br>"
                     .'<input type="text" name="quantity" value="1" size="2" /><input type="submit" value="'.$add_to_cart_btn.'" class="btnAddAction" />'
                     ."<br>\n</form>\n</div>\n<br>";
@@ -272,7 +275,7 @@
    </div>
    <div id="footer_container">
       <div id="footer_content">
-      <p class="footer_el">ITF16b 2018<p>
+      <p class="footer_el"><?php echo $footer; ?><p>
         <?php
         if ($lang == "de"){
             echo $en_lang_link;
@@ -280,6 +283,8 @@
         else {
             echo $de_lang_link;
         };?>
+        </p>
+    </p>
       </div>
    </div>
 <?php

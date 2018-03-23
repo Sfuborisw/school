@@ -149,7 +149,6 @@ p{
     float: left;
 }
 #login_bt input{
-    background: #283655;
 }
 input{
     box-sizing: border-box;
@@ -188,7 +187,7 @@ input:active{
     border: none;
     padding: 5px;
     height: 40px;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     width: 100%;
     margin: 0 auto;
     background-color: #1e1f26;
@@ -222,11 +221,12 @@ input:active{
 }
 #login{
     cursor: pointer;
-    background-color: #283655;;
+    background-color: #1e2027;
     border: 1px solid #d0e1f9;
     color: #d0e1f9;
     border-radius: 11px;
     height:39px;
+    font-size: 14px;
     font-weight: 500;
 }
 #login:hover{
