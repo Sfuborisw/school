@@ -84,7 +84,6 @@
 
 
          <div id="product_container">
-            <ul id="product_list">
                 <?php
                 $db = new SQLite3('static/db/webshop.db');
                 $results = $db->query('SELECT id, image, name, price FROM products;');
@@ -100,7 +99,6 @@
                     ."<br>\n</form>\n</div>\n<br>";
                 }
                ?>
-            </ul>
          </div>
          
         <div id="shopping_cart">
@@ -136,6 +134,30 @@
                class="form-control"
                name="birth_date"
                placeholder="Geburtsdatum YYYY-D-M"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="city_code"
+               placeholder="Postleitzahl"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="city"
+               placeholder="Stadt"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="street"
+               placeholder="Straße"
+               required>
+               <br>
+               <input type="text"
+               class="form-control"
+               name="housenr"
+               placeholder="Hausnummer"
                required>
                <br>
                <input type="password"
