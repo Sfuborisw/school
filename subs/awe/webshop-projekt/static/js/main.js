@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){ 
     $('#home').css({'color':'#00c4ff'});
-    $('#register_container, #user_container').hide();
+    $('#register_container, #user_container, #userpage_dropdown').hide();
     $('#register').click(function(){
         $('#product_container, #shopping_cart').hide(300);
         $('#register_container').show(300);
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
         $('#userpage, #home').css({'color':'#d0e1f9'});
     });
     $('#userpage').click(function(){
+        $('#userpage_drowdown').toggle();
         $('#product_container, #shopping_cart').hide(300);
         $('#register_container').hide(300);
         $('#user_container').show(300);
