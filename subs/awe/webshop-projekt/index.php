@@ -217,6 +217,7 @@
            echo "<script type=text/javascript>$('#userpage').html('".$uname."');</script>";
            echo "<script type=text/javascript>$('#login_container, #register').hide(1200);</script>";
            echo "<script type=text/javascript>$('#userpage').show(600);</script>";
+           echo "<script type=text/javascript>$('#nav').css('border-bottom', '3px solid #00c4ff');</script>";
        };
 ?>
 </body>

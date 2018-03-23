@@ -85,6 +85,7 @@ p{
     padding: 10px;
     overflow: hidden;
     z-index: 42;
+    border-bottom: 3px solid #f70025;
 }
 .nav_stuff{
     position: relative;
@@ -149,7 +150,7 @@ input:active{
 }
 #register:hover{
     cursor: pointer;
-    color: #f70025 !important;
+    color: #00c4ff !important;
 }
 #home{
     position: relative;
@@ -168,7 +169,7 @@ input:active{
 #login{
     cursor: pointer;
     background-color: #283655;;
-    border: 1px solid #d9d9d9;
+    border: 1px solid #d0e1f9;
     color: #d0e1f9;
     border-radius: 11px;
     height:39px;
@@ -181,11 +182,11 @@ input:active{
 }
 #home:hover{
     cursor: pointer;
-    color: #f70025 !important;
+    color: #00c4ff !important;
 }
 #userpage:hover{
     cursor: pointer;
-    color: #f70025 !important;
+    color: #00c4ff !important;
 }
 .hoverc{
     color: #d0e1f9;
