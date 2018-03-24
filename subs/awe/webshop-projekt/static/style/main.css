@@ -8,8 +8,8 @@ html, body {
     min-width: 1000px;
 }
 body {
-    background-color: white;
-    color: #2f313e;
+    background: linear-gradient(to bottom, #fff, #fdfdfd);
+    color: #272727;
     font-family: 'PT Serif', serif;
 }
 input:-webkit-autofill {
@@ -24,7 +24,7 @@ h3{
 }
 h1{
     font-size: 30px;
-    color: #2f313e;
+    color: #272727;
 }
 ul{
     list-style-type:none;
@@ -33,7 +33,7 @@ p{
     font-size: 12px;
 }
 .button{
-    background-color: #2f313e;
+    background-color: #272727;
 }
 #head_container {
     position: relative;
@@ -46,20 +46,21 @@ p{
     z-index: 50;
 }
 #body_container{
+    position: relative;
 }
 #body_content{
-    overflow: scroll;
-    color: #2f313e;
+    color: #272727;
 	position: relative;
 	min-height: 600px;
 }
 #product_container{
-	position: absolute;
+	position: fixed;
     float: left;
     left: 0px;
-	min-width: 400px;
-    min-height: 400px;
 	right: 280px;
+    top: 80px;
+    bottom: 45px;
+    min-width: 365px;
     overflow: scroll;
 }
 .product{
@@ -87,21 +88,21 @@ p{
 .product input[type=submit]{
     position: relative;
     height: 34px;
-    border: 1px solid #2f313e;
+    border: 1px solid #272727;
     margin-left: 20px;
     width: auto;
 }
 .product input[type=text]{
     background-color: white;
-    border: 1px solid #2f313e;
-    color: #2f313e;
+    border: 1px solid #272727;
+    color: #272727;
     text-align: center;
     width: 30px;
 }
 #shopping_cart{
 	position: fixed;
     background-color: #fff;
-    color: #2f313e;
+    color: #272727;
     padding: 20px;
 	right: 0px;
     margin: 20px;
@@ -112,11 +113,10 @@ p{
 }
 #footer_container{
     position: fixed;
-    background-color: #fff;
     bottom: 0px;
     width: 100%;
     margin-bottom: 0px;
-    border-top: 1px dashed #2f313e;
+    border-top: 1px dashed #272727;
 }
 #footer_content{
     position: relative;
@@ -130,16 +130,15 @@ p{
     position: relative;
     float: right;
     top: -3px;
-    color: #2f313e;
+    color: #272727;
     padding-right: 20px;
 }
 #nav{
     position: relative;
-    background-color: #fff;
     padding: 10px;
     overflow: hidden;
     z-index: 42;
-    border-bottom: 1px solid #2f313e;
+    border-bottom: 1px solid #272727;
 }
 .nav_stuff{
     position: relative;
@@ -182,12 +181,12 @@ p{
 }
 input{
     color: white;
-    background-color: #2f313e;
-    border: 1px solid #2f313e;
+    background-color: #272727;
+    border: 1px solid #272727;
     border-radius: 5px;
     font-family: 'PT Serif', serif;
     font-size: 16px;
-    width: 120px;
+    width: 170px;
 }
 #switch_lang{
     text-decoration: underline;
@@ -200,8 +199,7 @@ input:active{
 }
 .jq_link{
     display: inline-block;
-    color: #2f313e;
-    text-decoration: underline #2f313e;
+    color: #272727;
 }
 .jq_link:hover{
     cursor: pointer;
@@ -224,18 +222,18 @@ input:active{
     padding: 4px;
     height: 40px;
     border-bottom: 3px solid white;
-    background-color: #2f313e;
+    background-color: #272727;
     width: 300px;
 }
 .btn_register{
     height: 52px;
-    color: #2f313e;
+    color: #272727;
     font-size: 16px;
     background-color: #ffffff;
     text-align: left;
     padding: 2px;
     width: 310px;
-    border: 1px solid #2f313e;
+    border: 1px solid #272727;
     border-radius: 5px;
     text-align: center;
 }
@@ -253,7 +251,7 @@ input:active{
     display: inline-block;
 }
 #user_content{
-    color: #2f313e;
+    color: #272727;
     margin: 20px;
 }
 .w700{
@@ -263,9 +261,9 @@ input:active{
 #login{
     font-family: 'PT Serif', serif;
     cursor: pointer;
-    background-color: #fff;
-    border: 1px solid #2f313e;
-    color: #2f313e;
+    border: 1px solid #272727;
+    background: none;
+    color: #272727;
     border-radius: 5px;
     height:39px;
     font-size: 14px;
@@ -301,4 +299,8 @@ input:active{
     width: 300px;
     margin: 0px auto;
     margin-top: 20px;
+}
+#welcome_msg{
+    margin-top: 20%;
+    text-align: center;
 }

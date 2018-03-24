@@ -29,6 +29,7 @@
         $home_bt = $row[$lang.'_home_bt'];
         $login_bt = $row[$lang.'_login_bt'];
         $footer = $row[$lang.'_footer'];
+        $welcome_msg = $row[$lang.'_welcome_msg'];
         $email_placeholder = $row[$lang.'_email_placeholder'];
         $de_lang_link = $row['de_lang_link'];
         $en_lang_link = $row['en_lang_link'];
@@ -114,7 +115,7 @@
 
       <div id="body_content">
 
-
+        <div id="welcome_msg"><h1><?php echo $welcome_msg; ?></h1></div>
          <div id="product_container">
                 <?php
                 $db = new SQLite3('static/db/webshop.db');
