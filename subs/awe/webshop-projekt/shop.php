@@ -47,6 +47,7 @@
         $login_bt = $row[$lang.'_login_bt'];
         $footer = $row[$lang.'_footer'];
         $email_placeholder = $row[$lang.'_email_placeholder'];
+        $logout_bt = $row[$lang.'_logout_bt'];
         $de_lang_link = $row['de_lang_link'];
         $en_lang_link = $row['en_lang_link'];
         $salt = "1729";
@@ -295,7 +296,7 @@
    <div id="footer_container">
       <div id="footer_content">
       <p class="footer_el"><?php echo $footer; ?></p>
-      <p><a href="logout.php" class="footer_el" id="logout">Logout</a></p>
+      <p><a href="logout.php" class="footer_el" id="logout"><?php echo $logout_bt; ?></a></p>
 <p>
 <?php
         if ($lang == "de"){
