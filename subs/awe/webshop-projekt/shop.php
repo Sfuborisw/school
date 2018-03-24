@@ -2,7 +2,24 @@
 <?php
    ob_start();
    session_start();
-   $lang = "de";
+   $fname_cookie = $_COOKIE['fname'];
+   $umail_cookie = $_COOKIE['umail'];
+   $lang_cookie = $_COOKIE['lang'];
+   if (isset($_COOKIE['fname'], $_COOKIE['umail'], $_COOKIE['lang'])){
+       $umail = $umail_cookie;
+       $lang = $lang_cookie;
+       $fname = $fname_cookie;
+       $logged_in = True;
+   }
+   else{
+       $umail = False;
+       $fname = False;
+       $lang = "de";
+   }
+   if ($lang != "en"){
+    $lang = "de";
+   };
+
    if(isset($_GET['lang'])){ 
         $lang = $_GET['lang']; 
     } 
@@ -32,6 +49,7 @@
         $email_placeholder = $row[$lang.'_email_placeholder'];
         $de_lang_link = $row['de_lang_link'];
         $en_lang_link = $row['en_lang_link'];
+        $salt = "1729";
     };
     ?>
 <head>
@@ -56,7 +74,6 @@
              <div id='userpage_dropdown'>
                 <div id="acc_mgmt">Account-management</div>
                 <div id='history'>Letzte Bestellungen</div>
-                <div id='logout'>Logout</div>
              </div>
          </div>
          <div id='register' class='jq_link nav_stuff'><?php echo $register_btn; ?></div>
@@ -91,15 +108,18 @@
                     $umail = $row['email'];
                     $uhash = $row['pass_hash'];
                 }
-            if (md5($_POST['password']) == $uhash) {
+            if (md5($salt.$_POST['password']) == $uhash) {
                $_SESSION['valid'] = true;
                $_SESSION['timeout'] = time();
                $_SESSION['email'] = 'user';
                $logged_in = True;
+               $_SESSION['email'] = $umail;
+               setcookie('fname', $uname);
+               setcookie('lang', $lang);
+               setcookie('umail', $umail);
             }
             else {
                echo 'Incorrect email/pass-combination!';
-               $umail = False;
                $logged_in = False;
             }
          }
@@ -248,7 +268,7 @@
                 $lname = "'".SQLite3::escapeString($_POST['lname'])."'";
                 $birth_date ="'". SQLite3::escapeString($_POST['birth_date'])."'";
                 $umail = "'".SQLite3::escapeString($_POST['email'])."'";
-                $pass_hash = "'".SQLite3::escapeString(md5($_POST['pass']))."'";
+                $pass_hash = "'".SQLite3::escapeString(md5($salt.$_POST['pass']))."'";
                 $city_code = "'".SQLite3::escapeString($_POST['city_code'])."'";
                 $city_name = "'".SQLite3::escapeString($_POST['city'])."'";
                 $street_name = "'".SQLite3::escapeString($_POST['street'])."'";
@@ -274,22 +294,22 @@
    </div>
    <div id="footer_container">
       <div id="footer_content">
-      <p class="footer_el"><?php echo $footer; ?><p>
-        <?php
+      <p class="footer_el"><?php echo $footer; ?></p>
+      <p><a href="logout.php" class="footer_el" id="logout">Logout</a></p>
+<p>
+<?php
         if ($lang == "de"){
             echo $en_lang_link;
         }
         else {
             echo $de_lang_link;
-        };?>
-        </p>
-    </p>
+        };?></p>
       </div>
    </div>
 <?php
        echo "<script type=text/javascript>$('#userpage').hide();</script>";
        if ($logged_in == True){
-           echo "<script type=text/javascript>$('#userpage').html('".$uname."');</script>";
+           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
            echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
            echo "<script type=text/javascript>$('#userpage').show(0);</script>";
        };

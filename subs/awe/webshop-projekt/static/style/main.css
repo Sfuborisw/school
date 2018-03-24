@@ -17,7 +17,6 @@ input:-webkit-autofill {
 }
 a {
     text-decoration: none;
-    color: #fff;
 }
 h3{
     margin: 5px;
@@ -303,4 +302,7 @@ input:active{
 #welcome_msg{
     margin-top: 25%;
     text-align: center;
+}
+#logout{
+    text-decoration: underline;
 }

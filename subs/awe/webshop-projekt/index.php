@@ -3,6 +3,12 @@
    ob_start();
    session_start();
    $lang = "de";
+   if(isset($_COOKIE['lang'])){
+        $lang = $_COOKIE['lang'];
+   }
+   else{
+        $lang = "de";
+   }
    if(isset($_GET['lang'])){ 
         $lang = $_GET['lang']; 
     } 
