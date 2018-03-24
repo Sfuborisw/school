@@ -127,7 +127,7 @@
                     ."<img src='data:image/png;base64,".base64_encode($row['image'])
                     ."' width='100px' height='100px'></img><br>"
                     .$row['price'].",00€<br>"
-                    .'<input type="text" name="quantity" value="1" size="2" /><input type="submit" value="'.$add_to_cart_btn.'" class="btnAddAction" />'
+                    .'<div id="product_selector"><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="'.$add_to_cart_btn.'" class="btnAddAction" /></div>'
                     ."<br>\n</form>\n</div>\n";
                 }
                ?>
