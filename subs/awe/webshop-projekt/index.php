@@ -39,7 +39,7 @@
    <link rel="stylesheet" type="text/css" href="static/style/main.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="static/js/main.js"></script>
-   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
    <meta charset="utf-8">
 </head>
 <body>
@@ -293,7 +293,6 @@
            echo "<script type=text/javascript>$('#userpage').html('".$uname."');</script>";
            echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
            echo "<script type=text/javascript>$('#userpage').show(0);</script>";
-           echo "<script type=text/javascript>$('#nav').css('border-bottom', '3px solid #00c4ff');</script>";
        };
 ?>
 </body>
