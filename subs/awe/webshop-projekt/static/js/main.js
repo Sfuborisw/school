@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){ 
     $('#home').css({'text-decoration': ' underline #2f313e'});
     $('#register_container, #user_container, #userpage_dropdown').hide();
+    $('#product_container, #shopping_cart, #head_container, #footer_container').hide();
     $('#product_container, #shopping_cart, #head_container, #footer_container').fadeIn();
     $('#register').click(function(){
         $('#product_container, #shopping_cart').hide(0);

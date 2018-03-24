@@ -63,8 +63,11 @@
 </head>
 <body>
    <div id="head_container">
+   <script type="text/javascript">
+        $("#head_container").hide();
+    </script>
       <div id="head_content">
-      <a href="./shop.php"><h1><?php echo $head_title; ?></h1></a>
+      <a href="./index.php"><h1><?php echo $head_title; ?></h1></a>
       </div>
 
 
@@ -94,6 +97,14 @@
                <button id="login" class="nav_stuff" type="submit" 
                name="login"><?php echo $login_bt; ?></button>
          </form>
+<?php
+       echo "<script type=text/javascript>$('#userpage').hide();</script>";
+       if ($logged_in == True){
+           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
+           echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
+           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
+       };
+?>
     </div>
     </div>
       </div>
@@ -136,6 +147,9 @@
       <div id="body_content">
 
          <div id="product_container">
+   <script type="text/javascript">
+        $("#product_container").hide();
+    </script>
                 <?php
                 $db = new SQLite3('static/db/webshop.db');
                 $results = $db->query('SELECT id, image, '.$lang.'_name, price FROM products;');
@@ -296,7 +310,8 @@
    <div id="footer_container">
       <div id="footer_content">
       <p class="footer_el"><?php echo $footer; ?></p>
-      <p><a href="logout.php" class="footer_el" id="logout"><?php echo $logout_bt; ?></a></p>
+      <?php if($logged_in == True){
+      echo '<p><a href="logout.php" class="footer_el" id="logout">'.$logout_bt.'</a></p>'; } ?>
 <p>
 <?php
         if ($lang == "de"){
@@ -307,12 +322,4 @@
         };?></p>
       </div>
    </div>
-<?php
-       echo "<script type=text/javascript>$('#userpage').hide();</script>";
-       if ($logged_in == True){
-           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
-           echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
-           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
-       };
-?>
 </body>
