@@ -52,6 +52,24 @@
         $en_lang_link = $row['en_lang_link'];
         $salt = "1729";
     };
+	switch ($_GET['action']){
+	case "add":
+    if (!empty($_POST['quantity'])){
+		$query_cmd = "update cart_products set quantity_".$GET["code"]." = '".$_POST['quantity']."' where id = '".$_GET["code"]."';";
+echo $query_cmd;
+        $result = $db->query($query_cmd);
+	}
+case "remove":
+	if(!empty($_SESSION["cart_item"])) {
+		foreach($_SESSION["cart_item"] as $k => $v) {
+			if($_GET["id"] == $k)	unset($_SESSION["cart_item"][$k]);				
+			if(empty($_SESSION["cart_item"])) unset($_SESSION["cart_item"]);
+		}
+	}
+case "empty":
+	unset($_SESSION["cart_item"]);
+break;
+    };
     ?>
 <head>
     <title><?php echo $web_title; ?></title>
@@ -81,6 +99,14 @@
              </div>
          </div>
          <div id='register' class='jq_link nav_stuff'><?php echo $register_btn; ?></div>
+<?php
+       echo "<script type=text/javascript>$('#userpage').hide();</script>";
+       if ($logged_in == True){
+           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
+           echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
+           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
+       };
+?>
          <form class="form_signin" id="login_container" role="form" 
          action="<?php echo $_SERVER["PHP_SELF"] . '?'.http_build_query($_GET); ?>"
                method = "post">
@@ -97,14 +123,6 @@
                <button id="login" class="nav_stuff" type="submit" 
                name="login"><?php echo $login_bt; ?></button>
          </form>
-<?php
-       echo "<script type=text/javascript>$('#userpage').hide();</script>";
-       if ($logged_in == True){
-           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
-           echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
-           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
-       };
-?>
     </div>
     </div>
       </div>
@@ -121,6 +139,7 @@
                     $uhash = $row['pass_hash'];
                 }
             if (md5($salt.$_POST['password']) == $uhash) {
+                echo "<script type=text/javascript>$('#register_container').hide();</script>";
                $_SESSION['valid'] = true;
                $_SESSION['timeout'] = time();
                $_SESSION['email'] = 'user';
@@ -136,6 +155,14 @@
             }
          }
          ?>
+<?php
+       echo "<script type=text/javascript>$('#userpage').hide();</script>";
+       if ($logged_in == True){
+           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
+           echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
+           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
+       };
+?>
     </div>
 
    </div>
@@ -155,26 +182,66 @@
                 $results = $db->query('SELECT id, image, '.$lang.'_name, price FROM products;');
                 while ($row = $results->fetchArray()){
                     echo "<div class='product'>"
-                        ."<form method='shop' action='shop.php?action=add&code=".$row['id'].">\n"
-                    ."<div class='product'>"
-                    .'<h3>'.$row[$lang.'_name']."</h3><br>"
-                    ."<img src='data:image/png;base64,".base64_encode($row['image'])
-                    ."' width='100px' height='100px'></img><br>"
-                    .$row['price'].",00€<br>"
-                    .'<div id="product_selector"><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="'.$add_to_cart_btn.'" class="btnAddAction" /></div>'
-                    ."<br>\n</form>\n</div>\n";
+                            ."<div class='product_content'>"
+                                ."<form method='post' action='shop.php?action=add&code=".$row['id']."'>"
+                                .'<h3>'.$row[$lang.'_name']."</h3><br>"
+                                ."<img src='".($row['image'])."' width='100px' height='100px'></img><br>"
+                            ."</div>"
+                            .$row['price'].",00€<br>"
+                            .'<div id="product_selector">'
+                                .'<input type="text" name="quantity" value="1" size="2" />'
+                                .'<input type="submit" value="'.$add_to_cart_btn.'" class="btnAddAction" />'
+                            .'</div>'
+                            ."</form>"
+                        ."</div>";
                 }
                ?>
          </div>
          
-        <div id="shopping_cart">
-        <h3><?php echo $cart_title; ?></h3>
-            <ul id="selection_list">
-            <li><?php echo $placeholder; ?></li>
-            </ul>
+<div id="shopping_cart">
+<div class="txt-heading">Shopping Cart <a id="btnEmpty" href="index.php?action=empty">Empty Cart</a></div>
+<?php
+if(isset($_SESSION["cart_item"])){
+    $item_total = 0;
+?>	
+<table cellpadding="10" cellspacing="1">
+<tbody>
+<tr>
+<th style="text-align:left;"><strong>Name</strong></th>
+<th style="text-align:left;"><strong>Code</strong></th>
+<th style="text-align:right;"><strong>Quantity</strong></th>
+<th style="text-align:right;"><strong>Price</strong></th>
+<th style="text-align:center;"><strong>Action</strong></th>
+</tr>	
+<?php		
+    foreach ($_SESSION["cart_item"] as $item){
+		?>
+				<tr>
+				<td style="text-align:left;border-bottom:#F0F0F0 1px solid;"><strong><?php echo $item[$lang."_name"]; ?></strong></td>
+				<td style="text-align:left;border-bottom:#F0F0F0 1px solid;"><?php echo $item["id"]; ?></td>
+				<td style="text-align:right;border-bottom:#F0F0F0 1px solid;"><?php echo $item["quantity"]; ?></td>
+				<td style="text-align:right;border-bottom:#F0F0F0 1px solid;"><?php echo "$".$item["price"]; ?></td>
+				<td style="text-align:center;border-bottom:#F0F0F0 1px solid;"><a href="index.php?action=remove&code=<?php echo $item["id"]; ?>" class="btnRemoveAction">Remove Item</a></td>
+				</tr>
+				<?php
+        $item_total += ($item["price"]*$item["quantity"]);
+		}
+		?>
+
+<tr>
+<td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
+</tr>
+</tbody>
+</table>		
+  <?php
+}
+?>
+</div>
+</div>
          </div>
 
       <div id="register_container">
+<?php echo "<script type=text/javascript>$('#register_container').hide();</script>"; ?>
          <form class="form-signin" role="form" 
             action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
                ?>" method = "post">
@@ -319,7 +386,12 @@
         }
         else {
             echo $de_lang_link;
-        };?></p>
+        };
+       if ($logged_in == True){
+           echo "<script type=text/javascript>$('#userpage').html('".$fname."');</script>";
+           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
+       };?>
+        </p>
       </div>
    </div>
 </body>

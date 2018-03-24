@@ -5,7 +5,6 @@ html, body {
     overflow: scroll;
     font-size: 14px;
     min-height: 600px;
-    min-width: 1000px;
 }
 body {
     background: linear-gradient(to bottom, #fff, #fdfdfd);
@@ -59,25 +58,23 @@ p{
 }
 #product_container{
 	position: fixed;
-    float: left;
-    left: 0px;
-	right: 280px;
     top: 71px;
-    bottom: 45px;
-    min-width: 365px;
-    overflow: scroll;
+    bottom: 45px !important;
+    overflow: auto;
+    padding-right: 205px;
+    padding-bottom: 20px;
 }
 .product{
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
+    float: left;
     background-color: #fff;
     width: 300px;
     position: relative;
-    padding: 20px;
+    padding: 15px;
 	top: 0px;
     text-align: center;
-	float: left;
-	margin-left: 20px;
-	margin-top: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 .product input{
    border-radius: 5px; 
@@ -315,3 +312,8 @@ input:active{
 #logout{
     text-decoration: underline;
 }
+.product_content {
+    z-index: 100;
+}
+.cart-item {border-bottom: #79b946 1px dotted;padding: 10px;}
+
