@@ -123,12 +123,12 @@
                     echo "<div class='product'>"
                         ."<form method='post' action='index.php?action=add&code=".$row['id'].">\n"
                     ."<div class='product'>"
+                    .'<h3>'.$row[$lang.'_name']."</h3><br>"
                     ."<img src='data:image/png;base64,".base64_encode($row['image'])
                     ."' width='100px' height='100px'></img><br>"
-                    .$row[$lang.'_name'].", "
-                    .$row['price']."<br>"
+                    .$row['price'].",00€<br>"
                     .'<input type="text" name="quantity" value="1" size="2" /><input type="submit" value="'.$add_to_cart_btn.'" class="btnAddAction" />'
-                    ."<br>\n</form>\n</div>\n<br>";
+                    ."<br>\n</form>\n</div>\n";
                 }
                ?>
          </div>
@@ -291,8 +291,8 @@
        echo "<script type=text/javascript>$('#userpage').hide();</script>";
        if ($logged_in == True){
            echo "<script type=text/javascript>$('#userpage').html('".$uname."');</script>";
-           echo "<script type=text/javascript>$('#login_container, #register').hide(1200);</script>";
-           echo "<script type=text/javascript>$('#userpage').show(600);</script>";
+           echo "<script type=text/javascript>$('#login_container, #register').hide(0);</script>";
+           echo "<script type=text/javascript>$('#userpage').show(0);</script>";
            echo "<script type=text/javascript>$('#nav').css('border-bottom', '3px solid #00c4ff');</script>";
        };
 ?>
