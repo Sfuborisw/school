@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){ 
     $('#home').css({'text-decoration': ' underline #2f313e'});
-    $('#register_container, #user_container, #userpage_dropdown, #product_container, #shopping_cart, #welcome_msg').hide(0);
-    $('#welcome_msg').fadeIn(2500);
-    $('#welcome_msg').fadeOut(700);
-    $('#product_container, #shopping_cart').delay(3200).fadeIn();
+    $('#register_container, #user_container, #userpage_dropdown').hide();
+    $('#product_container, #shopping_cart, #head_container, #footer_container').fadeIn();
     $('#register').click(function(){
         $('#product_container, #shopping_cart').hide(0);
         $('#register_container').show(0);
